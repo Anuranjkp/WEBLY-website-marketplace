@@ -1,0 +1,83 @@
+<div class="row box-cr mt-4">
+    <div class="col-md-6  shadow-lg p-3 mb-5 bg-white rounded ">
+        <div class="container mt-5 pl-5 ">
+            <h2 class="text-center">Create New <span style="background: -webkit-linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;" class="font-weight-bold">Exuba</span> Account</h2>
+            <form action="/dev/devsignup"  method="POST" onSubmit = "return checkPassword(this)">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" name="Name" placeholder="Enter Your Full Name">
+
+                </div>
+                <div class="form-group">
+                    <label for="">Email Address</label>
+                    <input type="email" class="form-control" name="Email" placeholder="Enter Your Email" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Enter Your Mobile Number</label>
+                    <input type="tel" class="form-control" name="Mobile" required placeholder="Enter Your Mobile"> 
+                </div>
+                <div class="form-group">
+                    <label for="date-of-birth">Date Of Birth</label>
+                    <input type="date" class="form-control" name="Date-Of-Birth" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="Passwd" placeholder="Enter A Password" required>
+                </div>
+                <div >
+                    <label>Confirm Your Password</label>
+                    <input type="password" class="form-control" id="confirmPasswd"  placeholder="Confirm The Password" required>
+                </div>
+                <div class="form-group">
+                    {{#if loginErr}}
+                    <h6 class="error text-danger border border-danger text-center font-weight-bold">{{loginErr}}</h6>
+                    {{/if}}
+                </div>
+                <div class="form-group">
+                    <label for="account-purpose">This Account For</label>
+                <select id="cars" class="border border-primary">
+                    <option value="volvo">Personal</option>
+                    <option value="saab">Company/Organization</option>
+                    <option value="opel">Business</option>
+                </select>
+                </div>
+                
+                 <div class="form-group text-center">
+                    <a href="#" class="text-danger text-center font-weight-bold" >Forgot Password?</a>
+                    <a href="/signup" class="text-primary font-weight-bold ">Alredy have an <span style="background: -webkit-linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-size:1.2rem" class="font-weight-bold">Exuba</span></a>
+                </div>
+                <button type="submit" class="btn btn-primary float-right "style="background: linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%)" >Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+     function checkPassword(form) {
+                password1 = form.Passwd.value;
+                password2 = document.getElementById("confirmPasswd").value;
+                userName = form.Name.value;
+                
+  
+                // If password not entered
+                if (password1 == '')
+                    alert ("Please enter Password");
+                      
+                // If confirm password not entered
+                else if (password2 == '')
+                    alert ("Please enter confirm password");
+                      
+                // If Not same return False.    
+                else if (password1 != password2) {
+                    alert ("\nPassword did not match: Please try again...")
+                    return false;
+                }
+  
+                // If same return True.
+                else{
+                    alert("Password Match: Dear "+userName+"  Welcome to Exuba!")
+                    return true;
+                }
+            }
+</script>
