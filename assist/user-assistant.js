@@ -8,7 +8,7 @@ module.exports = {
      return new Promise(async (resolve,reject)=>{
          let PasswordHashed = userSignupData.Passwd.toString()
          userSignupData.Passwd = await bcrypt.hash(PasswordHashed, 10)
-         db.get().collection(collection.USER_COLLECTION).insertOne(userSignupData).then((data)=>{
+         db.get().collection(process.env.USER_COLLECTION).insertOne(userSignupData).then((data)=>{
              resolve(data.ops[0])
          })
      })
@@ -17,7 +17,7 @@ module.exports = {
         return new Promise(async(resolve,reject)=>{
             let loginStatus = false;
             let response = {}
-            let user = await db.get().collection(collection.USER_COLLECTION).findOne({Email: userLoginData.Email})
+            let user = await db.get().collection(process.env.USER_COLLECTION).findOne({Email: userLoginData.Email})
 
             
             if(user){

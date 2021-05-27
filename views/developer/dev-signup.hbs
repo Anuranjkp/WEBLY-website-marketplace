@@ -1,16 +1,17 @@
-<div class="row box-cr mt-4">
-    <div class="col-md-6  shadow-lg p-3 mb-5 bg-white rounded ">
-        <div class="container mt-5 pl-5 ">
-            <h2 class="text-center">Create New <span style="background: -webkit-linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;" class="font-weight-bold">Exuba</span> Account</h2>
+
+<div class=" mt d-flex justify-content-around center" style="background: linear-gradient(90deg, rgb(174, 16, 126) 13%, rgb(58, 21, 114) 82%);border:2px solid black">
+    <div class="col-md-6  shadow-lg p-3  bg-white" >
+        <div class="container  pl-5  ">
+            <h2 class="text-center">Create New <span style="background: -webkit-linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;" class="font-weight-bold">Webly</span> Account</h2>
             <form action="/dev/devsignup"  method="POST" onSubmit = "return checkPassword(this)">
                 <div class="form-group">
                     <label for="">Name</label>
-                    <input type="text" class="form-control" name="Name" placeholder="Enter Your Full Name">
+                    <input type="text" class="form-control" name="devName" placeholder="Enter Your Full Name">
 
                 </div>
                 <div class="form-group">
                     <label for="">Email Address</label>
-                    <input type="email" class="form-control" name="Email" placeholder="Enter Your Email" required>
+                    <input type="email" class="form-control" name="devEmail" placeholder="Enter Your Email" required>
 
                 </div>
                 <div class="form-group">
@@ -36,7 +37,7 @@
                     {{/if}}
                 </div>
                 <div class="form-group">
-                    <label for="account-purpose">This Account For</label>
+                    <label for="account-purpose">Using Webly</label>
                 <select id="cars" class="border border-primary">
                     <option value="volvo">Personal</option>
                     <option value="saab">Company/Organization</option>
@@ -46,7 +47,7 @@
                 
                  <div class="form-group text-center">
                     <a href="#" class="text-danger text-center font-weight-bold" >Forgot Password?</a>
-                    <a href="/signup" class="text-primary font-weight-bold ">Alredy have an <span style="background: -webkit-linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-size:1.2rem" class="font-weight-bold">Exuba</span></a>
+                    <a href="/signup" class="text-black font-weight-bold ">Alredy have an <span style="background: -webkit-linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-size:1.2rem" class="font-weight-bold">Webly</span></a>
                 </div>
                 <button type="submit" class="btn btn-primary float-right "style="background: linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%)" >Login</button>
             </form>

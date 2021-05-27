@@ -1,0 +1,27 @@
+<div class="row mt-4" >
+    <div class="col-md-6 m-auto shadow-lg p-3 mb-5 bg-white rounded ">
+        <div class="container mt-5 pl-5">
+            <h2 class="text-center"><span style="background: -webkit-linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;" class="font-weight-bold">Login To Exuba</span></h2>
+            <form action="/dev/devlogin" method="POST">
+            {{#if loginErr}}
+                <p class="text-danger">{{loginErr}}</p>
+            {{/if}}
+                <div class="form-group">
+                    <label for="">Email Address</label>
+                    <input type="email" class="form-control" name="devEmail" placeholder="Enter Your Email">
+
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="Password" placeholder="Enter Your Password">
+                </div>
+                <div class="form-group text-center">
+                    <a href="#" class="text-danger text-center font-weight-bold" >Forgot Password?</a>
+                    <a href="/signup" class="text-primary font-weight-bold border border-primary">Create New Account</a>
+                </div>
+                
+                <button type="submit" class="btn btn-primary float-right" style="background: linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%)">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

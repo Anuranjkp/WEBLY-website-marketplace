@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var aos = require('aos')
+const dotenv = require('dotenv').config()
 var db = require("./config/db-connection")
 var hbs = require("express-handlebars")
 var Promise = require("promise");
