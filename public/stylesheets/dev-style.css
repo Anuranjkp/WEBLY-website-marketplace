@@ -1,0 +1,113 @@
+h1{
+    color: #fff;
+}
+.dev-workspace {
+    min-height: 18.73;
+    margin: 0 auto;
+    display: -webkit-flex; /* Safari */     
+    display: flex; /* Standard syntax */
+}
+.side-bar {
+    padding: 10px;
+    -webkit-flex: 1; /* Safari */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1; /* Standard syntax */
+    background-color: rgb(51, 29, 51);
+    border-right:1px solid rgb(99, 62, 98);
+}
+.opt-s {
+    transition: .3s;
+}
+.opt-s:hover {
+    background-color: rgb(88, 59, 88);
+    border-radius: 4rem;
+}
+.side-bar .opt {
+    border-bottom: 1px solid rgb(99, 62, 98);
+}   
+.side-bar .opt .dev-username {
+    font-style: italic;
+}
+
+.side-bar .opt .opt-text {
+    font-family: 'Pragati Narrow', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1.7px;
+}
+
+.work-area {
+    width: 80%;
+    height:auto;
+    background-color: rgb(33, 19, 33);
+}
+.work-area-header {
+    width: auto;
+    height:6rem;
+    background-color: rgb(33, 19, 33);
+}
+.sub-header0 {
+    width:auto;
+    height:60%;
+    border-bottom: 1px solid rgb(116, 90, 116);
+    background-color: rgb(33, 19, 33);
+}
+.sub-header1{
+    width:auto;
+    height:55%;
+    padding: 9px;
+    border-bottom: 1px solid rgb(116, 90, 116);
+    background-color: rgb(33, 19, 33);
+} 
+
+.search-bar {
+    background-color: rgb(33, 19, 33);
+    display: flex;
+    justify-content: space;
+    flex-direction: column;
+    padding: 9px;    
+    font-family: 'Pragati Narrow', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1.7px;
+}
+.search-bar input{
+    width: 16rem;
+    height:auto;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Pragati Narrow', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1.7px;
+    background-color: transparent;
+    border: none;
+    border-bottom:2px solid rgb(255, 61, 239) ;
+    border-right:2px solid rgb(255, 61, 239) ;
+
+}
+.text-header-bottom-r {
+    font-family: 'Pragati Narrow', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1px;
+    color: white;
+    font-weight:700;
+    font-size: .8rem;
+}
+::placeholder{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+.dev-account-info{
+    width: 8rem;
+}
+.card-text{
+    letter-spacing: 0px;
+    color: rgb(211, 192, 209);
+}
+.card-title{
+    color:rgb(220, 187, 217);
+}
+.card{
+    background-color: rgb(33, 16, 33);
+    margin-right:3rem;
+    border: 2px solid rgb(116, 90, 116);
+}

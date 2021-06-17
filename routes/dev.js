@@ -25,6 +25,25 @@ router.get('/devlogin',(req,res)=>{
     res.render("developer/dev-login", {layout:'dev-layout'})
 })
 router.post('/devlogin',(req,res)=>{
-  
+  devAssist.devLogin(req.body).then((loginResponse)=>{
+    
+    /* loginResponse is coming from dev-assistant & 
+      the object contains true or false status. 
+      if the email and passsowrd are correct 
+      then it have developer information parameter. 
+      Also the user login will be like this*/
+
+    if(loginResponse.status){
+      /* login true */
+      req.session.loggedIn = true
+      req.session.user = loginResponse.user
+      user = req.session.user
+      res.redirect('/dev')
+    }else{
+      req.session.logginErr="invalid username or password"
+      console.log("login Error")
+      res.redirect('/login')
+  }
+})
 })
 module.exports = router;
