@@ -1,48 +1,39 @@
 
-<div class=" mt d-flex justify-content-around center" style="background: linear-gradient(90deg, rgb(174, 16, 126) 13%, rgb(58, 21, 114) 82%);border:2px solid black">
-    <div class="col-md-6  shadow-lg p-3  bg-white" >
-        <div class="container  pl-5  ">
-            <h2 class="text-center">Create New <span style="background: -webkit-linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;" class="font-weight-bold">Webly</span> Account</h2>
+        <div class="container d-flex p-3 justify-content-center aligh-items-center">
+        <div class="bg-primary signup-container p-4 border border-dark" >
+            <h2 class="text-center text-white">Create New <span class="font-weight-bold">Webly</span> Account</h2>
             <form action="/dev/devsignup"  method="POST" onSubmit = "return checkPassword(this)">
                 <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" class="form-control" name="devName" placeholder="Enter Your Full Name">
+                    <label for="" class="text-white">Name</label>
+                    <input type="text" class="form-control input-style" name="devName" placeholder="Enter Your Full Name">
 
                 </div>
                 <div class="form-group">
-                    <label for="">Email Address</label>
-                    <input type="email" class="form-control" name="devEmail" placeholder="Enter Your Email" required>
+                    <label for="" class="text-white">Email Address</label>
+                    <input type="email" class="form-control input-style" name="devEmail" placeholder="Enter Your Email" required>
 
                 </div>
                 <div class="form-group">
-                    <label for="mobile">Enter Your Mobile Number</label>
-                    <input type="tel" class="form-control" name="Mobile" required placeholder="Enter Your Mobile"> 
+                    <label for="mobile" class="text-white">Enter Your Mobile Number</label>
+                    <input type="tel" class="form-control input-style" name="Mobile" required placeholder="Enter Your Mobile"> 
                 </div>
                 <div class="form-group">
-                    <label for="date-of-birth">Date Of Birth</label>
-                    <input type="date" class="form-control" name="Date-Of-Birth" required>
+                    <label for="date-of-birth" >Date Of Birth</label>
+                    <input type="date" class="form-control input-style" name="Date-Of-Birth" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" name="passwd" placeholder="Enter A Password" required>
+                    <input type="password" class="form-control input-style" name="passwd" placeholder="Enter A Password" required>
                 </div>
-                <div >
+                <div>
                     <label>Confirm Your Password</label>
-                    <input type="password" class="form-control" id="confirmPasswd"  placeholder="Confirm The Password" required>
+                    <input type="password" class="form-control input-style" id="confirmPasswd"  placeholder="Confirm The Password" required>
                 </div>
                 <div class="form-group">
                     {{#if loginErr}}
                     <h6 class="error text-danger border border-danger text-center font-weight-bold">{{loginErr}}</h6>
                     {{/if}}
-                </div>
-                <div class="form-group">
-                    <label for="account-purpose">Using Webly</label>
-                <select id="cars" class="border border-primary">
-                    <option value="volvo">Personal</option>
-                    <option value="saab">Company/Organization</option>
-                    <option value="opel">Business</option>
-                </select>
                 </div>
                 
                  <div class="form-group text-center">
@@ -52,7 +43,6 @@
                 <button type="submit" class="btn btn-primary float-right "style="background: linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%)" >Login</button>
             </form>
         </div>
-    </div>
 </div>
 <script>
      function checkPassword(form) {

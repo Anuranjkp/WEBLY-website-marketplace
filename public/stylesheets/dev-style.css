@@ -1,3 +1,4 @@
+
 h1{
     color: #fff;
 }
@@ -42,7 +43,7 @@ h1{
 }
 .work-area-header {
     width: auto;
-    height:6rem;
+    height:auto;
     background-color: rgb(33, 19, 33);
 }
 .sub-header0 {
@@ -53,7 +54,7 @@ h1{
 }
 .sub-header1{
     width:auto;
-    height:55%;
+    height:auto;
     padding: 9px;
     border-bottom: 1px solid rgb(116, 90, 116);
     background-color: rgb(33, 19, 33);
@@ -91,11 +92,7 @@ h1{
     font-weight:700;
     font-size: .8rem;
 }
-::placeholder{
-    color: white;
-    text-align: center;
-    font-weight: bolder;
-}
+
 .dev-account-info{
     width: 8rem;
 }
@@ -111,3 +108,15 @@ h1{
     margin-right:3rem;
     border: 2px solid rgb(116, 90, 116);
 }
+.input-style{
+    background-color: transparent;
+}
+.input-style:focus{
+    background-color: transparent;
+}
+.search-input::placeholder{
+    color: white;    
+    text-align: center;
+    font-weight: bolder;
+}
+/* signup form style*/

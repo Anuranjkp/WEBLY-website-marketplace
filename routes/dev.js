@@ -7,16 +7,27 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render("developer/dev-home", {layout:'dev-layout'})
+
+  if(req.session.dev){
+    console.log(req.session.dev)
+    res.render("developer/dev-home", {layout:'dev-layout'})
+  }else {
+    res.render("developer/dev-login", {layout:'dev-layout'})
+    console.log("dev not found")
+  }
+  
 });
 router.get('/devsignup', (req,res)=>{
-  res.render("developer/dev-signup",{layout:'dev-layout'})
+  console.log("rendering Signup page")
+  res.render("developer/dev-signup",{layout:'dev-layout'});
+  console.log("dev Signup page")
 })
 router.post("/devsignup", (req,res)=>{
-    devAssist.devSignup(req.body).then((response)=>{
+    devAssist.devSignup(req.body).then((response)=>{  
       console.log(response);
       req.session.loggedIn=true
       req.session.user=response
+      developer = req.session.user
       console.log("Exuba freelancing developer successful")
       res.redirect("/dev")
     })
