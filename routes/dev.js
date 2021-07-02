@@ -103,6 +103,7 @@ router.post('/addProjects',(req,res)=>{
     //uploading files
     let thumbnail = req.files.thumbnail;
     let website = req.files.website;
+
     //uploading thumbanil image
     thumbnail.mv("./public/web-thumbnails/"+id+".png",(err)=>{
       if(err) {
@@ -111,6 +112,7 @@ router.post('/addProjects',(req,res)=>{
         console.log("thumbnail image uploaded to server");
       }
     })
+    
     //uploading website zip
     website.mv("./public/websites/"+id+".zip",(err)=>{
       if(err){
