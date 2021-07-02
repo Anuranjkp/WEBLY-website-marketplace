@@ -1,0 +1,37 @@
+  <div class="container d-flex p-3 justify-content-center aligh-items-center">
+        <div class="signup-container p-4 " >
+            <h2 class="text-center">Create New <span class="font-weight-bold">Webly</span> Project</h2>
+            <form action="/dev/addProjects"  method="POST" onSubmit = "return checkPassword(this)" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="" >Project name</label>
+                    <input type="text" class="form-control input-style" name="projectName" placeholder="Full Name" autocomplete="off">
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="mt-2">Project thumbnail</label>
+                    <input type="file" class="form-control input-style fs-input mt-1 mb-2" name="thumbnail" placeholder="Full Name" autocomplete="off">
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="mt-2">Programming language</label>
+                    <input type="text" class="form-control input-style mb-1" name="programmingLanguage" placeholder="Technology of the website?" autocomplete="off" required>
+
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="" class="mt-2">Number of pages</label>
+                    <input type="number" class="form-control input-style " name="pages" autocomplete="off" placeholder="Number of pages in your website?" required>
+                </div>
+                <div>
+                    <label class="mt-2">Website</label>
+                    <input type="file" class="form-control input-style fs-input mt-1" autocomplete="off"  name="website" required>
+                </div>
+                <div class="form-group">
+                    <label for="" class="mt-2">Price</label>
+                    <input type="number" class="form-control input-style mb-4" name="websitePrice" autocomplete="off" required placeholder="Project Price"> 
+                </div>
+                <button type="submit" class="btn-style float-right" >Submit</button>
+            </form>
+        </div>
+</div>

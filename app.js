@@ -6,12 +6,14 @@ var logger = require('morgan');
 var aos = require('aos')
 const dotenv = require('dotenv').config()
 var db = require("./config/db-connection")
-var hbs = require("express-handlebars")
+var hbs = require("express-handlebars");
+var upload = require("express-fileupload");
 var Promise = require("promise");
 var session = require("express-session")
 
 var indexRouter = require('./routes/index');
 var devRouter = require('./routes/dev');
+const { fileURLToPath } = require('url');
 
 var app = express();
 
@@ -27,6 +29,7 @@ app.engine('hbs',hbs({
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(upload());  
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));

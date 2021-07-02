@@ -97,8 +97,9 @@ h1{
     width: 8rem;
 }
 .card-text{
-    letter-spacing: 0px;
     color: rgb(211, 192, 209);
+    font-weight: bold;
+    font-family: sans-serif;
 }
 .card-title{
     color:rgb(220, 187, 217);
@@ -119,4 +120,5 @@ h1{
     text-align: center;
     font-weight: bolder;
 }
+
 /* signup form style*/

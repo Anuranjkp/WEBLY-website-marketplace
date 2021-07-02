@@ -1,29 +1,58 @@
-<div class="row mt-4" >
-    <div class="col-md-6 m-auto shadow-lg p-3 mb-5 bg-white rounded ">
-        <div class="container mt-5 pl-5">
-            <h2 class="text-center"><span style="background: -webkit-linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;" class="font-weight-bold">Login To Exuba</span></h2>
-            <form action="/dev/devlogin" method="POST">
-            {{#if loginErr}}
-                <p class="text-danger">{{loginErr}}</p>
-            {{/if}}
-                <div class="form-group">
-                    <label for="">Email Address</label>
-                    <input type="email" class="form-control" name="devEmail" placeholder="Enter Your Email">
 
-                </div>
+        <div class="container d-flex p-3 justify-content-center aligh-items-center">
+        <div class="signup-container p-4 ">
+            <h2 class="text-center">Login to<span class="font-weight-bold">Webly</span> </h2>
+            <form action="/dev/devlogin"  method="POST" onSubmit = "return checkPassword(this)">
+
+                <div class="form-group">
+                    <label for="" class="mt-2">Email Address</label>
+                    <input type="email" class="form-control input-style" name="devEmail" placeholder="Email" autocomplete="off" required>
+
+                </div>                
                 <div class="form-group mt-2">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="passwd" placeholder="Enter Your Password">
+                    <label for="password" class="mt-2">Password</label>
+                    <input type="password" class="form-control input-style" name="passwd" autocomplete="off" placeholder="Password" required>
                 </div>
-                <div class="form-group text-center mt-4">
-                    <a href="#" class="text-danger text-center font-weight-bold" >Forgot Password?</a>
-                    <a href="/signup" class="text-primary font-weight-bold border border-primary">Create New Account</a>
-                </div>
-                <div class="text-center m-4">
-                    <button type="submit" class="btn btn-primary float-center" style="background: linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);width:80%">Login</button>
+                <div>
+                <div class="form-group">
+                    {{#if loginErr}}
+                    <h6 class="error text-danger border border-danger text-center font-weight-bold">{{loginErr}}</h6>
+                    {{/if}}
                 </div>
                 
+                 <div class="form-group mt-3 text-center m-2">
+                    <a href="#" class="text-center font-weight-bold" >Forgot Password?</a>
+                    <a href="/dev/devlogin" class="font-weight-bold ">Alredy have an Webly</a>
+                </div>
+                <button type="submit" class="btn-style float-right mt-3" >LOGIN</button>
             </form>
         </div>
-    </div>
 </div>
+<script>
+     function checkPassword(form) {
+                password1 = form.Passwd.value;
+                password2 = document.getElementById("confirmPasswd").value;
+                userName = form.Name.value;
+                
+  
+                // If password not entered
+                if (password1 == '')
+                    alert ("Please enter Password");
+                      
+                // If confirm password not entered
+                else if (password2 == '')
+                    alert ("Please enter confirm password");
+                      
+                // If Not same return False.    
+                else if (password1 != password2) {
+                    alert ("\nPassword did not match: Please try again...")
+                    return false;
+                }
+  
+                // If same return True.
+                else{
+                    alert("Password Match: Dear "+userName+"  Welcome to Exuba!")
+                    return true;
+                }
+            }
+</script>

@@ -14,19 +14,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&family=Ubuntu:wght@300&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  {{#if dev}}
+  {{#if developer}}
   <link rel="stylesheet" href="/stylesheets/dev-style.css">
   {{/if}}
+  {{#if formCss}}
   <link rel="stylesheet" href="/stylesheets/form-style.css">
-  <title>Join to webly Developer</title>
+  {{/if}}
+  <title>Join to webly Developer</title>  
 </head>
 
 <body>
-  {{#if dev}}
+  {{#if developer}}
   {{>dev-header}}
-  {{/if}}
-  {{#if dev}}
-  {{>dev-home}}
   {{/if}}
   {{{body}}}
 

@@ -4,6 +4,20 @@ const collection = require("../config/collection")
 const bcrypt = require("bcrypt")
 
 module.exports = {
+    varifyLoggedIn:(req,res,next) => {
+        if(req.session.loggedIn){
+            next()
+          }else {
+            res.render('user/intro-page', {layout:"intro"})
+          }
+    },
+    varifyLoggedOut:(req,res,next) => {
+        if(req.session.loggedIn){
+            res.redirect('/')
+          }else {
+           next()
+          }
+    },
  userSignup: (userSignupData) =>{
      return new Promise(async (resolve,reject)=>{
          let PasswordHashed = userSignupData.Passwd.toString()

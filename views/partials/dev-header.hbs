@@ -3,10 +3,10 @@
     <section class="side-bar">
 
         <div class="opt d-flex justify-content-between pb-3">
-            <span class="material-icons" style="color: rgb(255, 61, 239);font-size:2rem">
+            <span class="material-icons" style="color: rgb(187, 97, 187);font-size:2rem">
                 account_circle
             </span>
-            <strong class="dev-username text-light text-uppercase" style="font-size: 1.3rem;">John Smith</strong>
+            <strong class="dev-username text-light text-uppercase" style="font-size: 1.3rem;">{{developer.devName}}</strong>
         </div>
 
         <div class="opt p-2">
@@ -74,14 +74,13 @@
                     </div>
                 </div>
                 <div class="dev-account-info pt-2 bd-highlight d-flex justify-content-center aligh-items-center">
-                    <span class="material-icons" style="color:rgb(255, 61, 239);font-size: 1.8rem;">
+                    <span class="material-icons" style="color:rgb(138, 73, 138);font-size: 1.8rem;">
                         notifications_active
                     </span>
                 </div>
             </div>
             <div class="sub-header1 d-flex justify-content-between ">
                 <h5 class="text-header-bottom-r mt-2" style="">Recently viewed</h5>
-                <button type="button" class="btn btn-primary"
-                    style="font-weight: bolder;border: 1px solid rgb(0, 255, 234);">New Project</button>
+                <a href="/dev/addProjects"><button type="button" class="btn btn-primary" style="font-weight: bolder;border: 1px solid rgb(0, 255, 234);">New Project</button></a>
             </div>
         </div>

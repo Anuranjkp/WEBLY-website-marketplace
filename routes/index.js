@@ -4,26 +4,14 @@ const userAssistant = require('../assist/user-assistant');
 var router = express.Router();
 var userAssist = require("../assist/user-assistant")
 
-//Security check for user loggedin 
-const verifyLogin=(req,res,next)=>{
-  if(req.session.loggedIn){
-    next()
-  }else{
-    res.redirect('/login')  
-  }
-}
 
 /* GET index page. */
-router.get('/', function(req, res, next) {
-  if(req.session.user){
+router.get('/',userAssist.varifyLoggedIn, function(req, res, next) {
     res.render('user/user-home', {user})
-  }else {
-  res.render('user/intro-page', {layout:'intro'});
-  }
 });
 
 //signup functions
-router.get('/signup',(req,res)=>{
+router.get('/signup',userAssist.varifyLoggedOut,(req,res)=>{
   res.render('user/signup')
 })
 
@@ -38,7 +26,7 @@ router.post("/signup", (req,res)=>{
 })
 
 //Login functions
-router.get('/login', (req,res)=>{
+router.get('/login',userAssist.varifyLoggedOut, (req,res)=>{
   res.render("user/login")
 })
 

@@ -1,34 +1,30 @@
 
         <div class="container d-flex p-3 justify-content-center aligh-items-center">
-        <div class="bg-primary signup-container p-4 border border-dark" >
-            <h2 class="text-center text-white">Create New <span class="font-weight-bold">Webly</span> Account</h2>
+        <div class="signup-container p-4 " >
+            <h2 class="text-center">Create New <span class="font-weight-bold">Webly</span> Account</h2>
             <form action="/dev/devsignup"  method="POST" onSubmit = "return checkPassword(this)">
                 <div class="form-group">
-                    <label for="" class="text-white">Name</label>
-                    <input type="text" class="form-control input-style" name="devName" placeholder="Enter Your Full Name">
+                    <label for="" >Name</label>
+                    <input type="text" class="form-control input-style" name="devName" placeholder="Full Name" autocomplete="off">
 
                 </div>
                 <div class="form-group">
-                    <label for="" class="text-white">Email Address</label>
-                    <input type="email" class="form-control input-style" name="devEmail" placeholder="Enter Your Email" required>
+                    <label for="" class="mt-2">Email Address</label>
+                    <input type="email" class="form-control input-style" name="devEmail" placeholder="Email" autocomplete="off" required>
 
                 </div>
                 <div class="form-group">
-                    <label for="mobile" class="text-white">Enter Your Mobile Number</label>
-                    <input type="tel" class="form-control input-style" name="Mobile" required placeholder="Enter Your Mobile"> 
-                </div>
-                <div class="form-group">
-                    <label for="date-of-birth" >Date Of Birth</label>
-                    <input type="date" class="form-control input-style" name="Date-Of-Birth" required>
+                    <label for="mobile" class="mt-2">Enter Your Mobile Number</label>
+                    <input type="tel" class="form-control input-style" name="Mobile" autocomplete="off" required placeholder="Mobile"> 
                 </div>
                 
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control input-style" name="passwd" placeholder="Enter A Password" required>
+                    <label for="password" class="mt-2">Password</label>
+                    <input type="password" class="form-control input-style" name="passwd" autocomplete="off" placeholder="Password" required>
                 </div>
                 <div>
-                    <label>Confirm Your Password</label>
-                    <input type="password" class="form-control input-style" id="confirmPasswd"  placeholder="Confirm The Password" required>
+                    <label class="mt-2">Confirm Your Password</label>
+                    <input type="password" class="form-control input-style" id="confirmPasswd" autocomplete="off"  placeholder="Confirm Password" required>
                 </div>
                 <div class="form-group">
                     {{#if loginErr}}
@@ -36,11 +32,11 @@
                     {{/if}}
                 </div>
                 
-                 <div class="form-group text-center">
-                    <a href="#" class="text-danger text-center font-weight-bold" >Forgot Password?</a>
-                    <a href="/dev/devlogin" class="text-black font-weight-bold ">Alredy have an <span style="background: -webkit-linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-size:1.2rem" class="font-weight-bold">Webly</span></a>
+                 <div class="form-group text-center m-2">
+                    <a href="#" class="text-center font-weight-bold" >Forgot Password?</a>
+                    <a href="/dev/devlogin" class="font-weight-bold ">Alredy have an Webly</a>
                 </div>
-                <button type="submit" class="btn btn-primary float-right "style="background: linear-gradient(90deg, rgb(112, 25, 86) 13%, rgb(58, 21, 114) 82%)" >Login</button>
+                <button type="submit" class="btn-style float-right" >LOGIN</button>
             </form>
         </div>
 </div>

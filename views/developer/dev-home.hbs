@@ -5,122 +5,23 @@
 
             <!--Editor-->
           <!-- Only change code inside of editor -->
-          <div class="row mt-3 m-2 d-flex justify-content-center">
-
-            <div class="card  col-md-3 shadow p-3 mb-3 rounded" style="width: 15rem;">
-              <div class="image-container  ">
-                <img class="card-img-top rounded" src="images/python-banner-updated.jpg" alt="Card image cap">
-              </div>
-              <div class="card-body p-1">
-                <h5 class="card-title m-1 text-center">Card title</h5>
-                <p class="card-text m-1 text-center" style="font-size: .9rem;">Some quick elsdfklxample text to build on
-                  the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2 d-flex justify-content-center">Go somewhere</a>
-              </div>
-            </div>
-
-            <div class="card col-md-3 shadow p-3 mb-3 rounded" style="width: 15rem;">
-              <div class="image-container  ">
-                <img class="card-img-top rounded" src="images/python-banner-updated.jpg" alt="Card image cap">
-              </div>
-              <div class="card-body p-1">
-                <h5 class="card-title m-1 text-center">Card title</h5>
-                <p class="card-text m-1 text-center" style="font-size: .9rem;">Some quick example text to build on the
-                  card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2 d-flex justify-content-center">Go somewhere</a>
-              </div>
-            </div>
-
-            <div class="card col-md-3 shadow p-3 mb-3 rounded" style="width: 15rem;">
-              <div class="image-container  ">
-                <img class="card-img-top rounded" src="images/python-banner-updated.jpg" alt="Card image cap">
-              </div>
-              <div class="card-body p-1">
-                <h5 class="card-title m-1 text-center">Card title</h5>
-                <p class="card-text m-1 text-center" style="font-size: .9rem;">Some quick example text to build on the
-                  card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2 d-flex justify-content-center">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-3 m-2 d-flex justify-content-center">
-
-            <div class="card col-md-3 shadow p-3 mb-3 rounded" style="width: 15rem;">
-              <div class="image-container  ">
-                <img class="card-img-top rounded" src="images/python-banner-updated.jpg" alt="Card image cap">
-              </div>
-              <div class="card-body p-1">
-                <h5 class="card-title m-1 text-center">Card title</h5>
-                <p class="card-text m-1 text-center" style="font-size: .9rem;">Some quick elsdfklxample text to build on
-                  the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2 d-flex justify-content-center">Go somewhere</a>
-              </div>
-            </div>
-
-            <div class="card col-md-3 shadow p-3 mb-3 rounded" style="width: 15rem;">
-              <div class="image-container  ">
-                <img class="card-img-top rounded" src="images/python-banner-updated.jpg" alt="Card image cap">
-              </div>
-              <div class="card-body p-1">
-                <h5 class="card-title m-1 text-center">Card title</h5>
-                <p class="card-text m-1 text-center" style="font-size: .9rem;">Some quick example text to build on the
-                  card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2 d-flex justify-content-center">Go somewhere</a>
-              </div>
-            </div>
-
-            <div class="card col-md-3 shadow p-3 mb-3 rounded" style="width: 15rem;">
-              <div class="image-container  ">
-                <img class="card-img-top rounded" src="images/python-banner-updated.jpg" alt="Card image cap">
-              </div>
-              <div class="card-body p-1">
-                <h5 class="card-title m-1 text-center">Card title</h5>
-                <p class="card-text m-1 text-center" style="font-size: .9rem;">Some quick example text to build on the
-                  card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2 d-flex justify-content-center">Go somewhere</a>
-              </div>
-            </div>
-          </div>
 
           <div class="row mt-3 m-2 d-flex justify-content-center">
-
-            <div class="card col-md-3 shadow p-3 mb-3 rounded" style="width: 15rem;">
+            {{#each websites}}
+              <div class="card  col-md-3 shadow p-3 mb-3 rounded" style="width: 18rem;">
               <div class="image-container  ">
-                <img class="card-img-top rounded" src="images/python-banner-updated.jpg" alt="Card image cap">
+                <img class="card-img-top rounded" src="{{this.image}}" alt="Card image cap">
               </div>
               <div class="card-body p-1">
-                <h5 class="card-title m-1 text-center">Card title</h5>
-                <p class="card-text m-1 text-center" style="font-size: .9rem;">Some quick elsdfklxample text to build on
-                  the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2 d-flex justify-content-center">Go somewhere</a>
+                <h5 class="card-title m-1 text-center">{{this.title}}</h5>
+                <p class="card-text m-1 text-center" style="font-size: .9rem;">{{this.description}}</p>
+                  <h6 class="card-text m-2">Category: {{this.category}}</h6>
+                <a href="#" class="btn btn-primary m-3 d-flex justify-content-center">Editd project</a>
               </div>
             </div>
 
-            <div class="card col-md-3 shadow p-3 mb-3 rounded" style="width: 15rem;">
-              <div class="image-container  ">
-                <img class="card-img-top rounded" src="images/python-banner-updated.jpg" alt="Card image cap">
-              </div>
-              <div class="card-body p-1">
-                <h5 class="card-title m-1 text-center">Card title</h5>
-                <p class="card-text m-1 text-center" style="font-size: .9rem;">Some quick example text to build on the
-                  card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2 d-flex justify-content-center">Go somewhere</a>
-              </div>
+            {{/each}}
             </div>
-
-            <div class="card col-md-3 shadow p-3 mb-3 rounded" style="width: 15rem;">
-              <div class="image-container  ">
-                <img class="card-img-top rounded" src="images/python-banner-updated.jpg" alt="Card image cap">
-              </div>
-              <div class="card-body p-1">
-                <h5 class="card-title m-1 text-center">Card title</h5>
-                <p class="card-text m-1 text-center" style="font-size: .9rem;">Some quick example text to build on the
-                  card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary mt-2 d-flex justify-content-center">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <!-- Editor -->
         </div>
       </div>
     </section>
