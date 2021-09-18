@@ -2,19 +2,25 @@ const { response } = require('express');
 var express = require('express');
 const userAssistant = require('../assist/user-assistant');
 var router = express.Router();
-var userAssist = require("../assist/user-assistant")
+var userAssist = require("../assist/user-assistant");
+var proAssist = require('../assist/product-assistant');
+var db = require("../config/db-connection");
+const collection = require('../config/collection');
 
 
 /* GET index page. */
-router.get('/',userAssist.varifyLoggedIn, function(req, res, next) {
-    res.render('user/user-home', {user})
+router.get('/',userAssist.varifyLoggedIn,(req, res, next)=> {
+      proAssist.getWebData().then((data)=>{
+        let user = req.session.user;
+        console.log(data)
+        res.render('user/user-home', {data,user})
+      })
 });
 
 //signup functions
 router.get('/signup',userAssist.varifyLoggedOut,(req,res)=>{
   res.render('user/signup')
 })
-
 router.post("/signup", (req,res)=>{
   userAssist.userSignup(req.body).then((response)=>{
     console.log(response);

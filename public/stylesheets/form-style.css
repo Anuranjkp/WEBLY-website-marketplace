@@ -34,6 +34,7 @@ body    {
     background: linear-gradient(120deg, rgb(91, 20, 148) 13%, rgb(184, 17, 161) 82%);
     max-width:25rem;
     border-radius:1rem;
+    margin-top: 3rem;
 }
 .signup-container h2 {
     font-family: sans-serif;
@@ -76,3 +77,41 @@ a {
     font-weight: bolder;
     border-radius:1.5em;
 }
+
+/* Thumbnail image in edit form */
+.thumb-img-edit {
+    width: 7rem;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid rgb(233, 156, 233);
+    top: 0px;
+    left: 39rem;
+}
+/* .thumb-img-text{
+    position: absolute;
+    z-index: 111;
+    color: white;
+    font-size: 1rem;
+    height: auto;
+    position: absolute;
+    bottom: auto;
+    top: 0%;
+    
+} */
+/* .thumb-img-edit:hover{
+    
+} */
+/* .thumb.img.merge {
+    position: absolute;
+    z-index: 0;
+} */
+.thumb-img-section {
+    background-image:url("/images/3.jpg");
+    position: absolute;
+    z-index: -1;
+    width: 300px;
+    height: 100px;
+}
+
+

@@ -80,8 +80,10 @@ h1{
     letter-spacing: 1.7px;
     background-color: transparent;
     border: none;
-    border-bottom:2px solid rgb(255, 61, 239) ;
-    border-right:2px solid rgb(255, 61, 239) ;
+    margin-top: .3rem;
+    border-radius: 4px;
+    border-bottom:1px solid rgb(160, 51, 151) ;
+    border-right:1px solid rgb(160, 51, 151) ;
 
 }
 .text-header-bottom-r {
@@ -121,4 +123,18 @@ h1{
     font-weight: bolder;
 }
 
+/* body color*/
+body {
+    background-color: #121212;
+}
+
 /* signup form style*/
+.webcard-delete-btn {
+    max-width:100%;
+    margin: 0px;
+    margin-right:.3rem;
+}
+.webcard-delete-btn2 {
+    width:100%;
+    margin: 0px;
+}

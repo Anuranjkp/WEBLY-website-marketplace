@@ -5463,7 +5463,9 @@ input[type="button"].btn-block {
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
+  letter-spacing: .18rem;
   line-height: inherit;
+  font-family: 'Alice', serif;
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }

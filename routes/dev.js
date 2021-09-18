@@ -3,51 +3,20 @@ var express = require('express');
 var devAssist = require("../assist/dev-assistant")
 var router = express.Router();
 var proAssist = require("../assist/product-assistant");
+var db = require("../config/db-connection")
+var objectId = require("mongodb").ObjectID
 
 
 
 /* GET users listing. */
 router.get('/',devAssist.varifyLoggedIn, (req, res, next)=> {
-  console.log("rendering developer panel")
-  let websites = [
-    {
-      title:'Python Personal Website',
-      description:'This is a persanl website built with python, it have bot chatting and great UI.',
-      category:"personal website",
-      image:'https://thumbs.dreamstime.com/z/python-programming-code-technology-banner-language-software-coding-development-website-design-136018975.jpg'
-    },
-    {
-      title:'nodejs business Website',
-      description:'This is a persanl website built with node, it have auto email and amazing UI.',
-      category:"business website",
-      image:'https://www.courses.tutorialswebsite.com/assets/front/img/category/Nodejs-banner.jpeg'
-    },
-    {
-      title:'Php ecommerce Website',
-      description:'This is a persanl website built with pho technology, .',
-      category:"ecommerce website",
-      image:'https://previews.123rf.com/images/varijanta/varijanta1605/varijanta160500044/56755965-thin-line-flat-design-banner-for-sale-web-page-shopping-e-commerce-discounts-and-clearance-sale-mode.jpg'
-    },
-    {
-      title:'Python Personal Website',
-      description:'This is a persanl website built with python, it have bot chatting and great UI.',
-      category:"personal website",
-      image:'https://thumbs.dreamstime.com/z/python-programming-code-technology-banner-language-software-coding-development-website-design-136018975.jpg'
-    },
-    {
-      title:'nodejs business Website',
-      description:'This is a persanl website built with node, it have auto email and amazing UI.',
-      category:"business website",
-      image:'https://www.courses.tutorialswebsite.com/assets/front/img/category/Nodejs-banner.jpeg'
-    },
-    {
-      title:'Php ecommerce Website',
-      description:'This is a persanl website built with pho technology, .',
-      category:"ecommerce website",
-      image:'https://previews.123rf.com/images/varijanta/varijanta1605/varijanta160500044/56755965-thin-line-flat-design-banner-for-sale-web-page-shopping-e-commerce-discounts-and-clearance-sale-mode.jpg'
-    }
-  ]
-  res.render('developer/dev-home', {developer,websites,layout: 'dev-layout'})
+  return new Promise(async(resolve,reject)=>{
+    let webData = await db.get().collection(process.env.WEBSITES).find().toArray()
+
+    console.log(webData)
+      res.render('developer/dev-home', {developer,webData,layout: 'dev-layout'})
+
+  }) 
 });
 
 //Rendering developer signup page
@@ -100,6 +69,7 @@ router.get('/addProjects',(req,res)=>{
 })
 router.post('/addProjects',(req,res)=>{
   proAssist.addWebsite(req.body).then((id)=>{
+
     //uploading files
     let thumbnail = req.files.thumbnail;
     let website = req.files.website;
@@ -123,5 +93,35 @@ router.post('/addProjects',(req,res)=>{
     })
     res.redirect('/dev/addProjects')
   })
+})
+router.get("/delete-project/",(req,res)=>{
+    let webId=req.query.id;
+    console.log(webId)
+    proAssist.deleteWebsite(webId).then((response)=>{
+      res.redirect("/dev")
+    })
+})
+router.get("/edit-project/",(req,res)=>{
+  return new Promise(async(resolve,reject)=>{
+    let formCss = true
+    let dataId = req.query.id
+    let editData = await db.get().collection(process.env.WEBSITES).findOne(objectId(dataId));
+    console.log(editData)
+    res.render('developer/edit-projects',{formCss,editData,layout:'dev-layout'})
+  })
+
+})
+router.post("/edit-project/:id",(req,res)=>{
+  let id = req.params.id;
+  console.log(id)
+  proAssist.updateWebsite(id,req.body).then(()=>{
+    res.redirect('/dev')
+    if(req.files.thumbnail){
+      let image = req.files.thumbnail
+      image.mv('./public/web-thumbnails/'+id+'.png')
+    }
+
+  });
+
 })
 module.exports = router;

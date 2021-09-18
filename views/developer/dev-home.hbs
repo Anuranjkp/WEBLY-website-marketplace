@@ -7,20 +7,24 @@
           <!-- Only change code inside of editor -->
 
           <div class="row mt-3 m-2 d-flex justify-content-center">
-            {{#each websites}}
+            {{#each webData}}
               <div class="card  col-md-3 shadow p-3 mb-3 rounded" style="width: 18rem;">
-              <div class="image-container  ">
-                <img class="card-img-top rounded" src="{{this.image}}" alt="Card image cap">
+              <div class="image-container">
+                <img class="card-img-top rounded " src="/web-thumbnails/{{this._id}}.png" alt="Card image cap">
               </div>
-              <div class="card-body p-1">
-                <h5 class="card-title m-1 text-center">{{this.title}}</h5>
-                <p class="card-text m-1 text-center" style="font-size: .9rem;">{{this.description}}</p>
-                  <h6 class="card-text m-2">Category: {{this.category}}</h6>
-                <a href="#" class="btn btn-primary m-3 d-flex justify-content-center">Editd project</a>
+              <div class="card-body p-1" style="height:50%;">
+                <h5 class="card-title m-1 text-center">{{this.projectName}}</h5>
+                <p class="card-text m-1 text-center" style="font-size: .9rem;">{{this.programmingLanguage}}</p>
+                  <h6 class="card-text m-2 text-center">Category: {{this.websitePrice}}</h6>
+                  <div class="webcard-btns d-flex justify-content-between">
+                    <a href="/dev/delete-project?id={{this._id}}" class="btn btn-danger d-flex justify-content-center webcard-delete-btn" onclick="return confirm('are you sure to delete {{this.projectName}}')">Delete</a>
+                <a href="/dev/edit-project?id={{this._id}}" class="btn btn-primary d-flex justify-content-center webcard-delete-btn2">EDIT</a>
+                  </div>
+                  
               </div>
             </div>
-
-            {{/each}}
+          {{/each}}
+            
             </div>
         </div>
       </div>
