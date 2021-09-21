@@ -13,26 +13,36 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&family=Ubuntu:wght@300&display=swap"
     rel="stylesheet">
+
+  {{!-- Google Fonts --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
+
+  {{!--   Font Icon--}}
+  <link rel="stylesheet" href="/fonts/material-design-iconic-font.min.css">
+
   {{#if developer}}
   <link rel="stylesheet" href="/stylesheets/dev-style.css">
   {{/if}}
   {{#if formCss}}
   <link rel="stylesheet" href="/stylesheets/form-style.css">
+  <script src="/javascripts/confirmPasswd.js"></script>
   {{/if}}
   <title>Join to webly Developer</title>
 </head>
 
-<body>
+<body>  
   {{#if developer}}
   {{>dev-header}}
   {{/if}}
   {{{body}}}
 
-
+    <script src="/javascripts/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
