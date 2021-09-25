@@ -18,16 +18,21 @@ module.exports = {
         return new Promise(async (resolve, reject) => {
             let PasswordHash = devSignupData.passwd.toString()
             devSignupData.passwd = await bcrypt.hash(PasswordHash, 10)
+            console.log("password hashed")
             bcrypt.compare(devSignupData.confirmPasswd, devSignupData.passwd).then((data)=>{
+            
                 if(data){
             delete devSignupData.confirmPasswd
+            console.log("confirm passwoed deleted")
             console.log(devSignupData)
             db.get().collection(process.env.DEV_COLLECTION).insertOne(devSignupData).then((data) => {
+                console.log("data added to database")
                 resolve(data.ops[0])
             })
             }else{
-                let loginStatusFalse = false
-                resolve(loginStatusfalse)
+                console.log("password not matched....thank you")
+                let signupFailed = true
+                resolve(signupFailed)
             }
 
             })

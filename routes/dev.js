@@ -31,6 +31,20 @@ router.get('/devsignup', (req, res) => {
 router.post("/devsignup", (req, res) => {
   console.log(req.body)
   devAssist.devSignup(req.body).then((response) => {
+
+    
+
+
+
+
+
+
+
+    if (response.loginFailed){
+      console.log(response.loginFailed)
+      console.log("login failed 310")
+      res.redirect("/dev");
+    }
     if(response){
     console.log(response);
     req.session.loggedIn = true
@@ -38,10 +52,7 @@ router.post("/devsignup", (req, res) => {
     developer = req.session.user
     console.log("welcome to webly")
     res.redirect("/dev")
-    }else{
-      console.log("login failed 310")
-      res.redirect("/dev");
-    }
+    }  
   })
 })
 
