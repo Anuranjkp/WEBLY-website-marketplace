@@ -1,37 +1,41 @@
-  <div class="container d-flex p-3 justify-content-center aligh-items-center">
-        <div class="signup-container p-4 " >
+
+        <div class="signup-container p-4" >
             <h2 class="text-center">Create New <span class="font-weight-bold">Webly</span> Project</h2>
             <form action="/dev/addProjects"  method="POST" onSubmit = "return checkPassword(this)" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="" ></label>
                     <input type="text" class="form-control input-style" name="projectName" placeholder="Full Name" autocomplete="off">
 
                 </div>
                 <div class="form-group">
-                    <label for="" class="mt-2"></label>
-                    <input type="file" class="form-control input-style fs-input mt-1 mb-2" name="thumbnail" placeholder="Full Name" autocomplete="off">
+
+                    <h6 class="file-text">Select cover picture</h6>
+                    <input type="file" class="form-control input-style fs-input mt-1" name="thumbnail" placeholder="Full Name" autocomplete="off">
 
                 </div>
                 <div class="form-group">
-                    <label for="" class="mt-2"></label>
+
                     <input type="text" class="form-control input-style mb-1" name="programmingLanguage" placeholder="Technology of the website?" autocomplete="off" required>
 
                 </div>
                 
                 
                 <div class="form-group">
-                    <label for="" class="mt-2"></label>
+
                     <input type="number" class="form-control input-style " name="pages" autocomplete="off" placeholder="Number of pages in your website?" required>
                 </div>
                 <div>
                     <label class="mt-2"></label>
+                    <h6 class="file-text">Upload website</h6>
                     <input type="file" class="form-control input-style fs-input mt-1" autocomplete="off"  name="website" required>
                 </div>
                 <div class="form-group">
-                    <label for="" class="mt-2"></label>
-                    <input type="number" class="form-control input-style mb-4" name="websitePrice" autocomplete="off" required placeholder="Project Price"> 
+                    <input type="number" class="form-control input-style mt-3" name="websitePrice" autocomplete="off" required placeholder="Project Price"> 
                 </div>
                 <button type="submit" class="btn-style float-right" >Submit</button>
             </form>
+            
         </div>
-</div>
+
+
+
+
