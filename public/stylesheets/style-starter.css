@@ -31,7 +31,7 @@ Author URL: http://w3layouts.com
  body p {
    line-height: 1.5;
    font-size: 16px;
-   color: #6b778d;
+   color: #b0b6bf;
  }
  
  ol,
@@ -3311,12 +3311,18 @@ Author URL: http://w3layouts.com
  }
  
  .w3l-banner-slider-main p.login-texthny {
-   color: #f4f4f4;
-   font-size: 16px;
+   color: #bfbdbd;
+   font-size: 17px;
+   padding-left: 10px;
    font-weight: 600;
-   text-transform: capitalize;
+   background-color: #3a3535;
+   border-radius: 9px;
  }
- 
+ .w3l-banner-slider-main span.profile-icon {
+    color: #fff;
+    margin-right: 8px;
+ }
+
  .w3l-banner-slider-main .login label {
    color: #fff;
  }
@@ -5832,11 +5838,7 @@ Author URL: http://w3layouts.com
  .w3l-grids-hny-2 .boxhny13 img {
    width: 100%;
    height: auto;
-   border-radius: 50%;
-   -webkit-border-radius: 50%;
-   -o-border-radius: 50%;
-   -ms-border-radius: 50%;
-   -moz-border-radius: 50%;
+   border-radius: 2rem;
  }
  
  .w3l-grids-hny-2 .boxhny13 .boxhny-content {
@@ -10219,13 +10221,10 @@ Author URL: http://w3layouts.com
    height: auto;
  }
  
- .form-group {
-   margin-bottom: 1rem;
- }
+ 
  
  .form-text {
    display: block;
-   margin-top: 0.25rem;
  }
  
  .form-row {
@@ -18841,7 +18840,7 @@ Author URL: http://w3layouts.com
   color:rgb(89, 64, 90);
 }
 .product-incfhny{
-  background: linear-gradient(90deg, rgb(32, 32, 32) 0%, rgb(56, 38, 53)  100%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgb(49 39 49) 0%, rgb(56, 38, 53)  100%, rgba(0,212,255,1) 100%);
   margin-right:3rem;
   border-radius: 1rem;
 }
@@ -18875,8 +18874,6 @@ p .author-title{
 } */
 
 .container {
-  width: 100px;
-  height: 100px;
   display: block;
   margin-left: auto;
   margin-bottom: 5%;

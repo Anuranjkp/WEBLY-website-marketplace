@@ -13,13 +13,15 @@ router.get('/',userAssist.varifyLoggedIn,(req, res, next)=> {
       proAssist.getWebData().then((data)=>{
         let user = req.session.user;
         console.log(data)
+        console.log(user)
         res.render('user/user-home', {data,user})
       })
 });
 
 //signup functions
 router.get('/signup',userAssist.varifyLoggedOut,(req,res)=>{
-  res.render('user/signup')
+  let loginStyle = true
+  res.render('user/signup', {loginStyle})
 })
 router.post("/signup", (req,res)=>{
   userAssist.userSignup(req.body).then((response)=>{
@@ -33,7 +35,8 @@ router.post("/signup", (req,res)=>{
 
 //Login functions
 router.get('/login',userAssist.varifyLoggedOut, (req,res)=>{
-  res.render("user/login")
+  let loginStyle = true;
+  res.render("user/login", {loginStyle})
 })
 
 router.post("/login", (req,res)=>{
@@ -52,4 +55,6 @@ router.post("/login", (req,res)=>{
       }
   })
 })
+
+router.post("/login")
 module.exports = router;

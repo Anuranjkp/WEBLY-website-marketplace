@@ -1,7 +1,7 @@
 <!-- //w3l-banner-slider-main -->
 <section class="w3l-grids-hny-2">
 	<!-- /content-6-section -->
-	<div class="grids-hny-2-mian py-5 ">
+	<div class="grids-hny-2-mian ">
 		<div class="container py-lg-5">
 				
 			<h3 class="hny-title mb-0 text-center">Shop With <span>webly</span></h3>
@@ -78,12 +78,12 @@
 								<a href="#URL">
 										<img src="images/grid6.jpg" class="img-fluid" alt="" />
 								<div class="boxhny-content">
-									<h3 class="title">Luxury</h3>
+									<h3 class="title">Premium</h3>
 								</div>
 							</a>
 						</div>
 						<h4><a href="#URL">
-								Ultra Premuim Websites</a></h4>
+								Premuim Websites</a></h4>
 
 					
 				</div>
@@ -96,7 +96,7 @@
 
 <section class="w3l-content-w-photo-6">
 	<!-- /specification-6-->
-	  <div class="content-photo-6-mian py-5">
+	  <div class="content-photo-6-mian">
 			 <div class="container py-lg-5">
 					<div class="align-photo-6-inf-cols row">
 						
@@ -122,8 +122,8 @@
 	<!-- /products-->
 	<div class="ecom-contenthny py-5">
 		<div class="container py-lg-5">
-			<h3 class="hny-title mb-0 text-center">Shop With <span>Us</span></h3>
-			<p class="text-center">Websites that developed for your success	</p>
+			<h3 class="hny-title mb-0 text-center">Top <span>Offers</span></h3>
+			<p class="text-center">Top Websites always deliver more than expected</p>
 			<!-- /row-->
 			<div class="ecom-products-grids row mt-lg-5 mt-3">
 
@@ -148,11 +148,13 @@
 									</li>
 							</ul>
 							<div class="transmitv single-item">
-							<form action="#" method="post">
+							<form action="/addtocart/website/{{this._id}}" method="POST">
 									<input type="hidden" name="cmd" value="_cart">
 									<input type="hidden" name="add" value="1">
 									<input type="hidden" name="transmitv_item" value="{{this.projectName}}">
 									<input type="hidden" name="amount" value="{{this.websitePrice}}">
+									<input type="hidden" name="programming-language" value="{{this.programmingLanguage}}">
+									<input type="hidden" name="pages" value="{{this.pages}}">
 									<button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
 										Buy Now
 									</button>
@@ -203,7 +205,7 @@
 <!-- //content-6-section -->
 <section class="w3l-post-grids-6">
 	<!-- /post-grids-->
-	<div class="post-6-mian py-5">
+{{!-- 	<div class="post-6-mian py-5">
 		<div class="container py-lg-5">
 				<h3 class="hny-title text-center mb-0 ">Latest Blog <span>Posts</span></h3>
 				<p class="mb-5 text-center">Handpicked Favourites just for you</p>
@@ -270,9 +272,9 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> --}}
 <!-- //post-grids-->
-<section class="w3l-customers-sec-6">
+{{!-- <section class="w3l-customers-sec-6">
 	<div class="customers-sec-6-cintent py-5">
 		<!-- /customers-->
 		<div class="container py-lg-5">
@@ -432,7 +434,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> --}}
 <!-- //customers-->
 <section class="w3l-subscription-6">
 	<!--/customers -->

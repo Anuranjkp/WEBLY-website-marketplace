@@ -2,10 +2,6 @@ body    {
     margin:0px;
     display: flex;
     justify-content: center;
-
-    background-image: url('/images/form-bg.jpg');
-    background-size: cover;
-    background-position-x: center;
 }
 .input-style{
     background-color: transparent;
@@ -323,7 +319,6 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     font-size: 13px;
     line-height: 1.8;
     color: #222;
-    background-image: linear-gradient(270deg, #180115 0%, #270520 74%);
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
   }
