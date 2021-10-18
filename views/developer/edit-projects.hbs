@@ -5,12 +5,12 @@
             <h2 class="text-center">Edit <span class="font-weight-bold">Project</span> </h2>
             <form action="/dev/edit-project/{{editData._id}}"  method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="" >Project name</label>
+                    <label for="" ></label>
                     <input type="text" class="form-control input-style" name="projectName" value="{{editData.projectName}}" autocomplete="off">
 
                 </div>
                 <div class="form-group">
-                    <label for="" class="mt-2">Project thumbnail</label>
+                    <label for="" class="mt-2"></label>
                    
                     <input type="file" class="form-control thumb-img-merge input-style fs-input mt-1 mb-2" onchange="viewImage(event)" name="thumbnail" placeholder="Full Name" autocomplete="off">
                      {{!-- <p class="thumb-img-text">Thumbnail</p> --}}
@@ -20,18 +20,18 @@
                     
                 </div>
                 <div class="form-group">
-                    <label for="" class="mt-2">Programming language</label>
+                    <label for="" class="mt-2"></label>
                     <input type="text" class="form-control input-style mb-1" value="{{editData.programmingLanguage}}" name="programmingLanguage" placeholder="Technology of the website?" autocomplete="off" required>
 
                 </div>
                 
                 
                 <div class="form-group">
-                    <label for="" class="mt-2">Number of pages</label>
+                    <label for="" class="mt-2"></label>
                     <input type="number" class="form-control input-style " value="{{editData.pages}}" name="pages" autocomplete="off" placeholder="Number of pages in your website?" required>
                 </div>
                 <div class="form-group">
-                    <label for="" class="mt-2">Price</label>
+                    <label for="" class="mt-2"></label>
                     <input type="number" class="form-control input-style mb-4" value="{{editData.websitePrice}}" name="websitePrice" autocomplete="off" required placeholder="Project Price"> 
                 </div>
                

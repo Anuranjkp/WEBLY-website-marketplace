@@ -39,5 +39,12 @@ module.exports = {
                 resolve()
             })
         })
+    },
+    getWebDataById:(webId)=>{
+        return new Promise((resolve,reject)=>{
+            db.get().collection(process.env.WEBSITES).findOne({_id:objectId(webId)}).then((response)=>{
+                resolve(response)
+            })
+        })
     }
 }

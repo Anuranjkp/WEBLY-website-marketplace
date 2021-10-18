@@ -56,5 +56,13 @@ router.post("/login", (req,res)=>{
   })
 })
 
+router.get("/view/", (req,res)=>{
+  return new Promise(async(resolve,reject)=>{
+    proAssist.getWebDataById(req.query.id).then((data)=>{
+      res.render("user/view-website",{data});
+    })
+  })
+})
+
 router.post("/login")
 module.exports = router;

@@ -18883,12 +18883,25 @@ p .author-title{
   width:100px;
   height: 100px;
   margin: auto;
-  background-image:url("https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-image:url(/users-profile-pictures/img.jpeg);
   border-radius: 100%;
   position: relative;
   background-size:100%;
   }
   
+  .edit-profile-input-style {
+    position:absolute;
+    top:-1px;
+    left:-6px;
+    color: rgba(255, 255, 255, 0);
+    opacity: 0% ;
+    background-color:rgba(255, 255, 255, 0);
+  }
+
+  .fa-camera {
+    margin-top: .5rem;
+  }
+
 .inner {
   background-color: #9e9ea0;
   width: 35px;

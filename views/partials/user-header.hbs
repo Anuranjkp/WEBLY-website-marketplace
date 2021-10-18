@@ -35,10 +35,10 @@
 							<div class="container">
 								<div class="outer">
 									<div class="inner">
-										<a class="btn-open" href="#">
-											<span class="fa fa-camera"></span>
-											<input type="file" style="width: 50px;position:absolute;top:1px;left:2px;background-color">
-										</a>
+										
+											<span class="fa fa-camera" ></span>
+											<input type="file" class="edit-profile-input-style" style="position:absolute;top:-1px;left:-6px;background-color:rgb(123, 123, 123);" id="myInput" onchange="viewImage(event)">										
+											<img src="#" style="width: 7rem;height:auto;opacity:50%;position:absolute;top:-11rem" alt="" id="imgView">
 									</div>
 								</div>
 							</div>
@@ -51,7 +51,7 @@
 												aria-hidden="true"></span>{{user.Name}}</p>
 
 
-										<small id="emailHelp" class="form-text text-muted">Note: We'll never share your
+										<small id="emailHelp" class="form-text text-muted" onclick="document.getElementById('myInput').focus(); return false;" >Note: We'll never share your
 											Details
 											with anyone else.</small>
 									</div>
@@ -75,7 +75,7 @@
 											<div class="clearfix"></div>
 										</div>
 									</div>
-									<button type="submit" class="submit-login btn mb-4">Edit Profile</button>
+									<button type="submit" class="submit-login btn mb-4" id="editProfileBtn">Edit Profile</button>
 
 								</form>
 								<!--//login-form-->
@@ -231,3 +231,10 @@
 
 </section>
 <!-- //w3l-banner-slider-main -->
+
+
+<script>
+    function viewImage(event){
+        document.getElementById('imgView').src=URL.createObjectURL(event.target.files[0]);
+    }
+</script>
