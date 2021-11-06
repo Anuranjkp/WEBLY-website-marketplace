@@ -31,13 +31,13 @@
                     <span>Running Collection</span>
                 </h2>
                 
-                <p class="product-colors">Available Colors:
+                <p class="product-colors" style="color: rgb(61, 61, 61);">Available Colors:
                     <span class="black active" data-color-primary="#000" data-color-sec="#212121" data-pic="/web-thumbnails/{{data._id}}.png"></span>
                     <span class="red" data-color-primary="#7E021C" data-color-sec="#bd072d" data-pic="/web-thumbnails/{{data._id}}.png"></span>
                     <span class="orange" data-color-primary="#CE5B39" data-color-sec="#F18557" data-pic="/web-thumbnails/{{data._id}}.png"></span>
                 </p>
 				<h3>Rs. {{data.websitePrice}}.0</h3>
-                <a href="#"><button>Buy Now</button></a>
+                <a href="#"><input type="submit" value="Buy Now"></a>
                 <br>
 					
 				<div>
@@ -52,26 +52,8 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <a href="https://stylustechnepal.com" target="_blank">anuzbvbmaniac123@gmail.com</a>
-    </footer>
 
 
-    <script>
-        // Change The Picture and Associated Element Color when Color Options Are Clicked.
-        $(".product-colors span").click(function() {
-            $(".product-colors span").removeClass("active");
-            $(this).addClass("active");
-            $(".active").css("border-color", $(this).attr("data-color-sec"))
-            $("body").css("background", $(this).attr("data-color-primary"));
-            $(".content h2").css("color", $(this).attr("data-color-sec"));
-            $(".content h3").css("color", $(this).attr("data-color-sec"));
-            $(".container .imgBx").css("background", $(this).attr("data-color-sec"));
-            $(".container .details button").css("background", $(this).attr("data-color-sec"));
-            $(".imgBx img").attr('src', $(this).attr("data-pic"));
-        });
-    </script>
 
 </body>
 

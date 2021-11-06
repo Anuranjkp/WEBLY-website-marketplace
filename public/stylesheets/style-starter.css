@@ -3487,7 +3487,29 @@ Author URL: http://w3layouts.com
    -o-border-radius: 6px;
    -moz-border-radius: 6px;
  }
+
+ .secondary-demo-picture {
+  width: 7rem;
+  height:auto;
+  opacity:50%;
+  position:absolute;
+  top:-11rem
+ }
  
+ .profile-picture-button {
+  box-shadow: none;
+  background: rgb(174, 16, 126);
+  padding: 6px 6px;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  width: 93px;
+  opacity: 75%;
+  font-weight: 600;
+
+ }
  .w3l-banner-slider-main .overlay-login {
    display: none;
    position: fixed;
@@ -6428,9 +6450,10 @@ Author URL: http://w3layouts.com
  }
  
  .w3l-ecommerce-main .product-grid2 .product-image2 img {
-   width: 100%;
-   height: auto;
+   width: 320px; /* 320 pixels width */
+   height: 320px; /* 320 pixels height */
    margin: 0px;
+   
  }
  
  .w3l-ecommerce-main .product-image2 .pic-1 {
@@ -18883,7 +18906,6 @@ p .author-title{
   width:100px;
   height: 100px;
   margin: auto;
-  background-image:url(/users-profile-pictures/img.jpeg);
   border-radius: 100%;
   position: relative;
   background-size:100%;

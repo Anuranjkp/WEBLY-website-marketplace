@@ -46,5 +46,18 @@ module.exports = {
                 resolve(response)
             })
         })
+    },
+    getConfirmOrderData:(webId)=>{
+        return new Promise(async(resolve,reject)=>{
+            let websiteData;
+            let developerData;
+            let userData;
+
+            websiteData = await db.get().collection(process.env.WEBSITES).findOne({_id:objectId("616d27d30b4d8c2aa505b9c2")});
+            developerData = await db.get().collection(process.env.DEV_COLLECTION).findOne({_id:objectId("616d27310b4d8c2aa505b9c1")});
+            userData = await db.get().collection(process.env.USER_COLLECTION).findOne({_id:objectId("616d26d00b4d8c2aa505b9c0")})
+
+            resolve([websiteData,developerData,userData]);
+        })
     }
 }

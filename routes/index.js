@@ -64,5 +64,34 @@ router.get("/view/", (req,res)=>{
   })
 })
 
-router.post("/login")
+
+
+
+
+router.post("/edit/profile-picture/:id", (req,res)=>{
+  return new Promise(async(resolve,reject)=>{
+    if(req.files.profile) {
+        let image = req.files.profile;
+        let userid = req.params.id;
+        image.mv("./public/users-profile-pictures/" + userid + ".png");
+        let newProfile = true;
+        res.redirect("/")
+    }
+    else {
+      let profileErr = "select profile picture to update"
+      res.redirect("/" ,{profileErr})
+    }
+  })
+})
+
+
+router.get('/place-order/', (req,res)=>{
+    return new Promise(async(resolve,reject)=>{
+      console.log(req.query.id)
+      proAssist.getConfirmOrderData(req.query.id).then((data)=>{
+        console.log(data)
+      })
+    })
+})
+
 module.exports = router;
