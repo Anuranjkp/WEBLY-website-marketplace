@@ -6455,6 +6455,23 @@ Author URL: http://w3layouts.com
    margin: 0px;
    
  }
+
+ .first-card-confirm-order {
+  box-shadow: 4px 4px 39px -7px rgb(37 37 37 / 91%);
+    -webkit-box-shadow: 4px 4px 39px -7px rgb(46 46 46 / 26%);
+    -moz-box-shadow: 4px 4px 39px -7px rgba(51, 51, 51, 0.91);
+ }
+
+ .main-section-confirm-order {
+  
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  justify-content: center;
+  display:flex;
+  align-items:center;
+ }
  
  .w3l-ecommerce-main .product-image2 .pic-1 {
    opacity: 1;

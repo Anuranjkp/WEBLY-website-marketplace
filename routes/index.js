@@ -89,7 +89,7 @@ router.get('/place-order/', (req,res)=>{
     return new Promise(async(resolve,reject)=>{
       console.log(req.query.id)
       proAssist.getConfirmOrderData(req.query.id).then((data)=>{
-        console.log(data)
+        res.render('user/check-out', {data})
       })
     })
 })
