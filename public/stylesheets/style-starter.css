@@ -6641,10 +6641,10 @@ Author URL: http://w3layouts.com
  }
  
  .w3l-ecommerce-main .product-grid2 .price {
-   color: #fff;
-   font-size: 15px;
+   color: rgb(11 141 11);
+   font-size: 1.3rem;
    font-weight: bold;
-   font-family: 'Lato', sans-serif;
+   font-family: 'Poppins', sans-serif;
  }
  
  .w3l-ecommerce-main span.price del {
